@@ -9,6 +9,9 @@ We used a RTX A6000 GPU. The process used 5108 MiB of GPU memory.
 2. Clone this project `git clone https://github.com/uriel0co/mri_deep_project.git`
 3. 
 
+## SAM checkpoint donwload
+
+
 ## Data Download
 A link for the Brats2020 Dataset: https://www.kaggle.com/datasets/awsaf49/brats20-dataset-training-validation
 

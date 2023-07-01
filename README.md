@@ -1,4 +1,8 @@
-# Deep-learning applications in MRI (336028) - Final Project - Finetuning SAM segmentation model for Brats2020 Dataset - Uriel Cohen & Matan Millionschik - Technion, Israel
+# Deep-learning applications in MRI (336028)
+
+# Final Project - Finetuning SAM segmentation model for Brats2020 Dataset
+
+# Uriel Cohen & Matan Millionschik - Technion, Israel
 
 ## Runtime and system requirements
 Finetuning SAM with 32 images took 80 seconds per epoch, which is approximaly two hours for 100 epochs.

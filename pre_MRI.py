@@ -1,6 +1,6 @@
 """
 
-convert CT nii image to npz files, including input image, image embeddings, and ground truth
+convert MRI nii image to npz files, including input image, image embeddings, and ground truth
 
 """
 #%% import packages

@@ -61,6 +61,6 @@ data_dir = "BraTS2020_TrainingData/MICCAI_BraTS2020_TrainingData"
 train_dir = "medsam_train_data"
 test_dir = "medsam_test_data"
 
-# split_nii_files(data_dir, train_dir, test_dir, type="t2")
+split_nii_files(data_dir, train_dir, test_dir, type="t2")
 flatten_nii_files("medsam_seg_map_data")
 

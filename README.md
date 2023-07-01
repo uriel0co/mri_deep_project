@@ -10,7 +10,7 @@ We used a RTX A6000 GPU. The process used 5108 MiB of GPU memory.
 3. 
 
 ## SAM checkpoint donwload
-
+Download [SAM checkpoint](https://dl.fbaipublicfiles.com/segment_anything/sam_vit_b_01ec64.pth) and place it at `-workdir-/SAM/sam_vit_b_01ec64.pth`
 
 ## Data Download
 A link for the Brats2020 Dataset: https://www.kaggle.com/datasets/awsaf49/brats20-dataset-training-validation

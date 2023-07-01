@@ -9,7 +9,7 @@ We used a RTX A6000 GPU. The process used 5108 MiB of GPU memory.
 2. Clone this project `git clone https://github.com/uriel0co/mri_deep_project.git`
 3. 
 
-## SAM checkpoint donwload
+## SAM checkpoint Download
 Download [SAM checkpoint](https://dl.fbaipublicfiles.com/segment_anything/sam_vit_b_01ec64.pth) and place it at `-workdir-/SAM/sam_vit_b_01ec64.pth`
 
 ## Data Download

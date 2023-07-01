@@ -1,11 +1,7 @@
-#!/usr/bin/env python3
-# -*- coding: utf-8 -*-
 """
-Created on April 6 19:25:36 2023
 
 convert CT nii image to npz files, including input image, image embeddings, and ground truth
 
-@author: jma
 """
 #%% import packages
 import numpy as np

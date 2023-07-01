@@ -7,7 +7,6 @@ We used a machine with RTX A6000 GPU. The process used 5108 MiB of GPU memory.
 ## Installation:
 1. Create a new conda env using the provided environment.tml file `conda env create -f environment.yml` and activate it `conda activate uriel_sam_clean`
 2. Clone this project `git clone https://github.com/uriel0co/mri_deep_project.git`
-3. 
 
 ## SAM checkpoint Download
 Download [SAM checkpoint](https://dl.fbaipublicfiles.com/segment_anything/sam_vit_b_01ec64.pth) and place it at `-workdir-/SAM/sam_vit_b_01ec64.pth`

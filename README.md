@@ -36,7 +36,7 @@ Run the following code:
 python pre_MRI.py
 ```
 
-## We are for 👌tuning
+## We are ready for 👌tuning
 
 Run the following code:
 
@@ -45,6 +45,9 @@ python finetune.py
 ```
 
 # Some Results
+
+![image](https://github.com/uriel0co/mri_deep_project/assets/76814133/f2f75556-fa7c-4368-98f5-54d4a1ba07f9)
+
 
 
 ![image](https://github.com/uriel0co/mri_deep_project/assets/76814133/e30587d4-11ce-4d90-a3eb-a5a853432b3b)

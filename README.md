@@ -54,4 +54,4 @@ python finetune.py
 
 ## Acknowledgements
 - We thank BoWang's Lab at University of Toronto, for providing the framework for finetuning SAM ['MedSAM'](https://github.com/bowang-lab/MedSAM/tree/main).
-- We also thank our lecturer, Prof. Moti Freiman, for a fascinating course
+- We also thank our lecturer, Prof. Moti Freiman, for a fascinating course and for the opportunity to work on this project.

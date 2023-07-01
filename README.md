@@ -55,6 +55,4 @@ python finetune.py
 
 ## Acknowledgements
 - We thank BoWang's Lab at University of Toronto, for providing the framework for finetuning SAM ['MedSAM'](https://github.com/bowang-lab/MedSAM/tree/main).
-- We highly appreciate all the challenge organizers and dataset owners for providing the public dataset to the community. 
-- We thank Meta AI for making the source code of [segment anything](https://github.com/facebookresearch/segment-anything) publicly available.
-- We also thank Alexandre Bonnet for sharing this great [blog](https://encord.com/blog/learn-how-to-fine-tune-the-segment-anything-model-sam/)
+- We also thank our lecturer, Prof. Moti Freiman, for a fascinating course

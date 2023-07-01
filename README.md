@@ -18,14 +18,23 @@ A link for the Brats2020 Dataset: https://www.kaggle.com/datasets/awsaf49/brats2
 We have used only the training dataset, i.e. 'BraTS2020_TrainingData' directory, since we needed the segmentation mask for our self evaluation.
 
 ## Data Preprocessing
+
+### Data Splitting
 Run the following code: 
 
 ```bash
 python split.py
 ```
 
-- a
-- b
+- This code splits the BraTS2020_TrainingData for a new train and test directories
+
+### Data Preprocesses
+
+Run the following code:
+
+```bash
+python pre_MRI.py
+```
 
 
 ## Acknowledgements

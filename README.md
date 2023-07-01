@@ -1,8 +1,8 @@
 # Deep-learning applications in MRI (336028) - Final Project - Finetuning SAM segmentation model for Brats2020 Dataset - Uriel Cohen & Matan Millionschik - Technion, Israel
 
 ## Runtime and system requirements
-Finetuning SAM with 16 images took 40 seconds per epoch, which is approximaly an hour for 100 epochs we used.
-We used a RTX A6000 GPU. The process used 5108 MiB of GPU memory.
+Finetuning SAM with 32 images took 80 seconds per epoch, which is approximaly two hours for 100 epochs.
+We used a machine with RTX A6000 GPU. The process used 5108 MiB of GPU memory.
 
 ## Installation:
 1. Create a new conda env using the provided environment.tml file `conda env create -f environment.yml` and activate it `conda activate uriel_sam_clean`

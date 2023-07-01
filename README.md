@@ -36,6 +36,19 @@ Run the following code:
 python pre_MRI.py
 ```
 
+## We are for 👌tuning
+
+Run the following code:
+
+```bash
+python finetune.py
+```
+
+# Some Results
+
+
+![image](https://github.com/uriel0co/mri_deep_project/assets/76814133/e30587d4-11ce-4d90-a3eb-a5a853432b3b)
+
 
 ## Acknowledgements
 - We thank BoWang's Lab at University of Toronto, for providing the framework for finetuning SAM ['MedSAM'](https://github.com/bowang-lab/MedSAM/tree/main).

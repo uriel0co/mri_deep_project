@@ -1,4 +1,4 @@
-name: uriel_sam_clean
+name: sam_clean
 channels:
   - conda-forge
   - defaults

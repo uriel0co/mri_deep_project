@@ -213,4 +213,4 @@ dependencies:
     - werkzeug==2.3.6
     - widgetsnbextension==4.0.7
     - wrapt==1.14.1
-prefix: /home/uriel/miniconda3/envs/uriel_sam_clean
+prefix: /home/uriel/miniconda3/envs/sam_clean

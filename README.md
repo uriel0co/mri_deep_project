@@ -5,7 +5,7 @@ Finetuning SAM with 32 images took 80 seconds per epoch, which is approximaly tw
 We used a machine with RTX A6000 GPU. The process used 5108 MiB of GPU memory.
 
 ## Installation:
-1. Create a new conda env using the provided environment.tml file `conda env create -f environment.yml` and activate it `conda activate uriel_sam_clean`
+1. Create a new conda env using the provided environment.tml file `conda env create -f environment.yml` and activate it `conda activate sam_clean`
 2. Clone this project `git clone https://github.com/uriel0co/mri_deep_project.git`
 
 ## SAM checkpoint Download

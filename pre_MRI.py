@@ -30,6 +30,7 @@ parser.add_argument('--prefix', type=str, default='MRI_brain-tumor', help='prefi
 parser.add_argument('--model_type', type=str, default='vit_b', help='model type')
 parser.add_argument('--checkpoint', type=str, default='SAM/sam_vit_b_01ec64.pth', help='checkpoint')
 parser.add_argument('--device', type=str, default='cuda:0', help='device')
+parser.add_argument('--train_num', type=int, default=32, help='size of training set')
 # seed
 parser.add_argument('--seed', type=int, default=2023, help='random seed')
 args = parser.parse_args()
@@ -116,13 +117,17 @@ os.makedirs(save_path_ts, exist_ok=True)
 #%% set up the model
 sam_model = sam_model_registry[args.model_type](checkpoint=args.checkpoint).to(args.device)
 
+train_images_counter = 0
 for name in tqdm(train_names):
+    if train_images_counter >= args.train_num:
+        break
     image_name = name.split('_seg')[0] + args.img_name_suffix
     gt_name = name 
     imgs, gts, img_embeddings = preprocess_ct(args.gt_path, args.nii_path, gt_name, image_name, args.label_id, args.image_size, sam_model, args.device)
     if not imgs:
         continue
     if len(imgs)>1:
+        train_images_counter += 1
         imgs = np.stack(imgs, axis=0) # (n, 256, 256, 3)
         gts = np.stack(gts, axis=0) # (n, 256, 256)
         img_embeddings = np.stack(img_embeddings, axis=0) # (n, 1, 256, 64, 64)

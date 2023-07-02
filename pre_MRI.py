@@ -16,7 +16,7 @@ from segment_anything.utils.transforms import ResizeLongestSide
 import argparse
 
 # set up the parser
-parser = argparse.ArgumentParser(description='preprocess CT images')
+parser = argparse.ArgumentParser(description='preprocess MRI images')
 parser.add_argument('-i', '--nii_path', type=str, default='medsam_t2_data', help='path to the nii images')
 parser.add_argument('-gt', '--gt_path', type=str, default='medsam_seg_map_data', help='path to the ground truth',)
 parser.add_argument('-o', '--npz_path', type=str, default='medsam_data/Npz_files_256', help='path to save the npz files')

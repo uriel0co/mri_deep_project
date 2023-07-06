@@ -3,7 +3,7 @@
 convert MRI nii image to npz files, including input image, image embeddings, and ground truth
 
 """
-#%% import packages
+# import packages
 import numpy as np
 import SimpleITK as sitk
 import os

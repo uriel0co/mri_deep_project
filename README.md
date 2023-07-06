@@ -52,6 +52,10 @@ python finetune.py
 ![image](https://github.com/uriel0co/mri_deep_project/assets/76814133/e30587d4-11ce-4d90-a3eb-a5a853432b3b)
 
 
+![image](https://github.com/uriel0co/mri_deep_project/assets/76814133/5c4f13af-acc2-4129-afbb-3dc72f682669)
+
+
+
 ## Acknowledgements
 - We thank BoWang's Lab at University of Toronto, for providing the framework for finetuning SAM ['MedSAM'](https://github.com/bowang-lab/MedSAM/tree/main).
 - We also thank our lecturer, Prof. Moti Freiman, for a fascinating course and for the opportunity to work on this project.

@@ -9,6 +9,8 @@ import monai
 from segment_anything import SamPredictor, sam_model_registry
 from segment_anything.utils.transforms import ResizeLongestSide
 from utils.SurfaceDice import compute_dice_coefficient, compute_robust_hausdorff
+from scipy.spatial.distance import directed_hausdorff
+
 # set seeds
 torch.manual_seed(2023)
 np.random.seed(2023)
@@ -286,4 +288,23 @@ for case in range(len(test_npzs)):
     plt.close()
     
     print('Avg Dice of sam: ' + str(sum(sam_dice) / len(sam_dice)) + ', Avg Dice of medsam: ' + str(sum(medsam_dice) / len(medsam_dice)))
+
+    def compute_hausdorff_distance(mask_gt, mask_pred):
+        if np.sum(mask_gt) == 0 and np.sum(mask_pred) == 0:
+            return float('nan')
+        
+        points_gt = np.transpose(np.nonzero(mask_gt))
+        points_pred = np.transpose(np.nonzero(mask_pred))
+        
+        distance_gt_pred = directed_hausdorff(points_gt, points_pred)[0]
+        distance_pred_gt = directed_hausdorff(points_pred, points_gt)[0]
+        
+        hausdorff_distance = max(distance_gt_pred, distance_pred_gt)
+        return hausdorff_distance
+
+    ori_sam_dsc = compute_hausdorff_distance(gts>0, ori_sam_segs>0)
+    medsam_dsc = compute_hausdorff_distance(gts>0, medsam_segs>0)
+    sam_dice.append(ori_sam_dsc)
+    medsam_dice.append(medsam_dsc)
+    print('Original SAM HD: {:.4f}'.format(ori_sam_dsc), 'MedSAM HD: {:.4f}'.format(medsam_dsc))
 

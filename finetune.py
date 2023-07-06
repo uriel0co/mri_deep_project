@@ -13,7 +13,7 @@ from utils.SurfaceDice import compute_dice_coefficient, compute_robust_hausdorff
 torch.manual_seed(2023)
 np.random.seed(2023)
 
-#%% create a dataset class to load npz data and return back image embeddings and ground truth
+# create a dataset class to load npz data and return back image embeddings and ground truth
 class NpzDataset(Dataset): 
     def __init__(self, data_root):
         self.data_root = data_root
@@ -44,7 +44,7 @@ class NpzDataset(Dataset):
         # convert img embedding, mask, bounding box to torch tensor
         return torch.tensor(img_embed).float(), torch.tensor(gt2D[None, :,:]).long(), torch.tensor(bboxes).float()
 
-# %% set up model for fine-tuning 
+# set up model for fine-tuning 
 # train data path
 npz_tr_path = 'medsam_data/32_train_set/MRI_brain-tumor/train'
 work_dir = './'
@@ -62,7 +62,7 @@ sam_model.train()
 optimizer = torch.optim.Adam(sam_model.mask_decoder.parameters(), lr=1e-5, weight_decay=0)
 seg_loss = monai.losses.DiceCELoss(sigmoid=True, squared_pred=True, reduction='mean')
 
-# %% set up model for fine-tuning 
+# set up model for fine-tuning 
 # train data path
 npz_tr_path = 'medsam_data/32_train_set/MRI_brain-tumor/train'
 work_dir = './'
@@ -80,7 +80,7 @@ sam_model.train()
 optimizer = torch.optim.Adam(sam_model.mask_decoder.parameters(), lr=1e-5, weight_decay=0)
 seg_loss = monai.losses.DiceFocalLoss(sigmoid=True, squared_pred=True, reduction='mean')
 
-#%% train
+# train
 num_epochs = 100
 losses = []
 best_loss = 1e10
@@ -139,8 +139,8 @@ plt.ylabel('Loss')
 plt.savefig(join(model_save_path, 'train_loss.png'))
 plt.close()
 
-# uriel - complete code from cell below
-#%% compare the segmentation results between the original SAM model and the fine-tuned model
+# uriel
+# compare the segmentation results between the original SAM model and the fine-tuned model
 # load the original SAM model
 ori_sam_model = sam_model_registry[model_type](checkpoint=checkpoint).to(device)
 ori_sam_predictor = SamPredictor(ori_sam_model)
@@ -237,7 +237,7 @@ for case in range(len(test_npzs)):
     medsam_dice.append(medsam_dsc)
     print('Original SAM DSC: {:.4f}'.format(ori_sam_dsc), 'MedSAM DSC: {:.4f}'.format(medsam_dsc))
 
-    #%% visualize the segmentation results of the middle slice
+    # visualize the segmentation results of the middle slice
     # visualization functions
     # source: https://github.com/facebookresearch/segment-anything/blob/main/notebooks/predictor_example.ipynb
     # change color to avoid red and green
